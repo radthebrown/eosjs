@@ -29,6 +29,10 @@
                 
             
                 
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -62,6 +66,10 @@
 
         
     
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    
     
     
     <meta name="HandheldFriendly" content="true"/>
@@ -77,6 +85,7 @@
     
     <link rel="prev" href="./" />
     
+
 
     
         <link rel="shortcut icon" href='../images/favicon.ico' type="image/x-icon">
@@ -131,7 +140,7 @@
                 <a href="./">
             
                     
-                    guides
+                    Guides
             
                 </a>
             
@@ -819,7 +828,7 @@
                                 <h1 id="browsers">Browsers</h1>
 <h2 id="usage">Usage</h2>
 <p><code>npm run build-web</code> or <code>yarn build-web</code></p>
-<p>Reuse the <code>api</code> object for all transactions; it caches ABIs to reduce network usage. Only call <code>new eosjs_api.default(...)</code> once.</p>
+<p>Reuse the <code>api</code> object for all transactions; it caches ABIs to reduce network usage. Only call <code>new eosjs_api.Api(...)</code> once.</p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">pre</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 100%; height: 100%; margin:0px; &quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&apos;dist-web/eosjs-api.js&apos;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
@@ -827,10 +836,10 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&apos;dist-web/eosjs-jssig.js&apos;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
   <span class="hljs-keyword">let</span> pre = <span class="hljs-built_in">document</span>.getElementsByTagName(<span class="hljs-string">&apos;pre&apos;</span>)[<span class="hljs-number">0</span>];
-  <span class="hljs-keyword">const</span> defaultPrivateKey = <span class="hljs-string">&quot;5JtUScZK2XEp3g9gh7F8bwtPTRAkASmNrrftmx4AxDKD5K4zDnr&quot;</span>; <span class="hljs-comment">// useraaaaaaaa</span>
-  <span class="hljs-keyword">const</span> rpc = <span class="hljs-keyword">new</span> eosjs_jsonrpc.default(<span class="hljs-string">&apos;http://127.0.0.1:8888&apos;</span>);
-  <span class="hljs-keyword">const</span> signatureProvider = <span class="hljs-keyword">new</span> eosjs_jssig.default([defaultPrivateKey]);
-  <span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> eosjs_api.default({ rpc, signatureProvider });
+  <span class="hljs-keyword">const</span> defaultPrivateKey = <span class="hljs-string">&quot;5JtUScZK2XEp3g9gh7F8bwtPTRAkASmNrrftmx4AxDKD5K4zDnr&quot;</span>; <span class="hljs-comment">// bob</span>
+  <span class="hljs-keyword">const</span> rpc = <span class="hljs-keyword">new</span> eosjs_jsonrpc.JsonRpc(<span class="hljs-string">&apos;http://localhost:8888&apos;</span>);
+  <span class="hljs-keyword">const</span> signatureProvider = <span class="hljs-keyword">new</span> eosjs_jssig.JsSignatureProvider([defaultPrivateKey]);
+  <span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> eosjs_api.Api({ rpc, signatureProvider });
 
   (<span class="hljs-keyword">async</span> () =&gt; {
     <span class="hljs-keyword">try</span> {
@@ -839,12 +848,12 @@
             account: <span class="hljs-string">&apos;eosio.token&apos;</span>,
             name: <span class="hljs-string">&apos;transfer&apos;</span>,
             authorization: [{
-                actor: <span class="hljs-string">&apos;useraaaaaaaa&apos;</span>,
+                actor: <span class="hljs-string">&apos;bob&apos;</span>,
                 permission: <span class="hljs-string">&apos;active&apos;</span>,
             }],
             data: {
-                <span class="hljs-keyword">from</span>: <span class="hljs-string">&apos;useraaaaaaaa&apos;</span>,
-                to: <span class="hljs-string">&apos;useraaaaaaab&apos;</span>,
+                <span class="hljs-keyword">from</span>: <span class="hljs-string">&apos;bob&apos;</span>,
+                to: <span class="hljs-string">&apos;alice&apos;</span>,
                 quantity: <span class="hljs-string">&apos;0.0001 SYS&apos;</span>,
                 memo: <span class="hljs-string">&apos;&apos;</span>,
             },
@@ -893,7 +902,7 @@
 
             
                 
-                <a href="./" class="navigation navigation-prev " aria-label="Previous page: guides">
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Guides">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -909,7 +918,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"1. Browsers","level":"1.2.1","depth":2,"next":{"title":"2. Transaction Examples","level":"1.2.2","depth":2,"path":"guides/2.-Transaction-Examples.md","ref":"guides/2.-Transaction-Examples.md","articles":[]},"previous":{"title":"guides","level":"1.2","depth":1,"path":"guides/index.md","ref":"guides/index.md","articles":[{"title":"1. Browsers","level":"1.2.1","depth":2,"path":"guides/1.-Browsers.md","ref":"guides/1.-Browsers.md","articles":[]},{"title":"2. Transaction Examples","level":"1.2.2","depth":2,"path":"guides/2.-Transaction-Examples.md","ref":"guides/2.-Transaction-Examples.md","articles":[]},{"title":"3. Reading blockchain Examples","level":"1.2.3","depth":2,"path":"guides/3.-Reading blockchain-Examples.md","ref":"guides/3.-Reading blockchain-Examples.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["page-toc","custom-header-next@git+https://github.com/dskvr/gitbook-plugin-custom-header-next.git","favicon","livereload"],"pluginsConfig":{"livereload":{},"search":{},"page-toc":{"position":"before-first","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","showByDefault":true},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"images/favicon.ico","bookmark":"images/favicon.ico"},"custom-header-next":{"logo":"/eosjs/images/logo.png","logo_alt":"EOSIO","base_path":"/eosjs","text":"eosjs","navigations":[]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"guides/1.-Browsers.md","mtime":"2018-12-18T19:34:47.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-18T19:37:35.881Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"1. Browsers","level":"1.2.1","depth":2,"next":{"title":"2. Transaction Examples","level":"1.2.2","depth":2,"path":"Guides/2.-Transaction-Examples.md","ref":"Guides/2.-Transaction-Examples.md","articles":[]},"previous":{"title":"Guides","level":"1.2","depth":1,"path":"Guides/index.md","ref":"Guides/index.md","articles":[{"title":"1. Browsers","level":"1.2.1","depth":2,"path":"Guides/1.-Browsers.md","ref":"Guides/1.-Browsers.md","articles":[]},{"title":"2. Transaction Examples","level":"1.2.2","depth":2,"path":"Guides/2.-Transaction-Examples.md","ref":"Guides/2.-Transaction-Examples.md","articles":[]},{"title":"3. Reading blockchain Examples","level":"1.2.3","depth":2,"path":"Guides/3.-Reading blockchain-Examples.md","ref":"Guides/3.-Reading blockchain-Examples.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["page-toc","custom-header-next@git+https://github.com/dskvr/gitbook-plugin-custom-header-next.git","favicon","toggle-chapters","nocache","livereload"],"pluginsConfig":{"nocache":{},"livereload":{},"search":{},"page-toc":{"position":"before-first","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","showByDefault":true},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"images/favicon.ico","bookmark":"images/favicon.ico"},"custom-header-next":{"logo":"/eosjs/images/logo.png","logo_alt":"EOSIO","base_path":"/eosjs","text":"EOSJS","navigations":[]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Guides/1.-Browsers.md","mtime":"2019-04-01T19:47:41.050Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-01T20:00:00.355Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -932,6 +941,14 @@
     
         
         <script src="../gitbook/gitbook-plugin-custom-header-next/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-nocache/nocache.js"></script>
         
     
         

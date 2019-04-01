@@ -29,6 +29,10 @@
                 
             
                 
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
                 <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -62,6 +66,10 @@
 
         
     
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    
     
     
     <meta name="HandheldFriendly" content="true"/>
@@ -72,9 +80,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="guides/" />
+    <link rel="next" href="Guides/" />
     
     
+
 
     
         <link rel="shortcut icon" href='images/favicon.ico' type="image/x-icon">
@@ -124,12 +133,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="guides/">
+        <li class="chapter " data-level="1.2" data-path="Guides/">
             
-                <a href="guides/">
+                <a href="Guides/">
             
                     
-                    guides
+                    Guides
             
                 </a>
             
@@ -138,9 +147,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="guides/1.-Browsers.html">
+        <li class="chapter " data-level="1.2.1" data-path="Guides/1.-Browsers.html">
             
-                <a href="guides/1.-Browsers.html">
+                <a href="Guides/1.-Browsers.html">
             
                     
                     1. Browsers
@@ -151,9 +160,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="guides/2.-Transaction-Examples.html">
+        <li class="chapter " data-level="1.2.2" data-path="Guides/2.-Transaction-Examples.html">
             
-                <a href="guides/2.-Transaction-Examples.html">
+                <a href="Guides/2.-Transaction-Examples.html">
             
                     
                     2. Transaction Examples
@@ -164,9 +173,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="guides/3.-Reading blockchain-Examples.html">
+        <li class="chapter " data-level="1.2.3" data-path="Guides/3.-Reading blockchain-Examples.html">
             
-                <a href="guides/3.-Reading blockchain-Examples.html">
+                <a href="Guides/3.-Reading blockchain-Examples.html">
             
                     
                     3. Reading blockchain Examples
@@ -814,36 +823,35 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>&#x26A0;&#xFE0F; <strong><em>Important! We recently released a major breaking rewrite for eosjs. Be sure to lock your dependencies.</em></strong> &#x26A0;&#xFE0F;</p>
-<p>If you are looking for the the previous version of <code>eosjs</code> you can <a href="https://github.com/EOSIO/eosjs/tree/v16.0.9" target="_blank">find it here</a>.</p>
-<h1 id="eosjs">eosjs</h1>
+                                <h1 id="eosjs-">eosjs <img src="https://img.shields.io/npm/dw/eosjs.svg" alt="npm"></h1>
 <p>Javascript API for integration with EOSIO-based blockchains using <a href="https://developers.eos.io/eosio-nodeos/reference" target="_blank">EOSIO RPC API</a>.</p>
 <p>Documentation can be found <a href="https://eosio.github.io/eosjs" target="_blank">here</a></p>
 <h2 id="installation">Installation</h2>
+<h3 id="npm">NPM</h3>
+<p>The official distribution package can be found at <a href="https://www.npmjs.com/package/eosjs" target="_blank">npm</a>.</p>
 <h3 id="nodejs-dependency">NodeJS Dependency</h3>
-<p><code>npm install eosjs@beta</code> or <code>yarn add eosjs@beta</code></p>
+<p><code>yarn add eosjs</code></p>
 <h3 id="browser-distribution">Browser Distribution</h3>
-<p>Clone this repository locally then run <code>npm run build-web</code> or <code>yarn build-web</code>. The browser distribution will be located in <code>dist-web</code> and can be directly copied into your project repository. The <code>dist-web</code> folder contains minified bundles ready for production, along with source mapped versions of the library for debugging. For full browser usage examples, <a href="https://eosio.github.io/eosjs/guides/1.-Browsers.html" target="_blank">see the documentation</a>.</p>
+<p>Clone this repository locally then run <code>yarn build-web</code>. The browser distribution will be located in <code>dist-web</code> and can be directly copied into your project repository. The <code>dist-web</code> folder contains minified bundles ready for production, along with source mapped versions of the library for debugging. For full browser usage examples, <a href="https://eosio.github.io/eosjs/guides/1.-Browsers.html" target="_blank">see the documentation</a>.</p>
 <h2 id="import">Import</h2>
 <h3 id="es-modules">ES Modules</h3>
 <p>Importing using ES6 module syntax in the browser is supported if you have a transpiler, such as Babel.</p>
 <pre><code class="lang-js"><span class="hljs-keyword">import</span> { Api, JsonRpc, RpcError } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;eosjs&apos;</span>;
-
-<span class="hljs-keyword">import</span> JsSignatureProvider <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;eosjs/dist/eosjs-jssig&apos;</span>; <span class="hljs-comment">// development only</span>
+<span class="hljs-keyword">import</span> { JsSignatureProvider } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;eosjs/dist/eosjs-jssig&apos;</span>;           <span class="hljs-comment">// development only</span>
 </code></pre>
 <h3 id="commonjs">CommonJS</h3>
 <p>Importing using commonJS syntax is supported by NodeJS out of the box.</p>
 <pre><code class="lang-js"><span class="hljs-keyword">const</span> { Api, JsonRpc, RpcError } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;eosjs&apos;</span>);
-<span class="hljs-keyword">const</span> JsSignatureProvider = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;eosjs/dist/eosjs-jssig&apos;</span>);  <span class="hljs-comment">// development only</span>
-<span class="hljs-keyword">const</span> fetch = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;node-fetch&apos;</span>);                            <span class="hljs-comment">// node only; not needed in browsers</span>
-<span class="hljs-keyword">const</span> { TextEncoder, TextDecoder } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;util&apos;</span>);           <span class="hljs-comment">// node only; native TextEncoder/Decoder </span>
-<span class="hljs-keyword">const</span> { TextEncoder, TextDecoder } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;text-encoding&apos;</span>);  <span class="hljs-comment">// React Native, IE11, and Edge Browsers only</span>
+<span class="hljs-keyword">const</span> { JsSignatureProvider } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;eosjs/dist/eosjs-jssig&apos;</span>);      <span class="hljs-comment">// development only</span>
+<span class="hljs-keyword">const</span> fetch = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;node-fetch&apos;</span>);                                    <span class="hljs-comment">// node only; not needed in browsers</span>
+<span class="hljs-keyword">const</span> { TextEncoder, TextDecoder } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;util&apos;</span>);                   <span class="hljs-comment">// node only; native TextEncoder/Decoder</span>
+<span class="hljs-keyword">const</span> { TextEncoder, TextDecoder } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;text-encoding&apos;</span>);          <span class="hljs-comment">// React Native, IE11, and Edge Browsers only</span>
 </code></pre>
 <h2 id="basic-usage">Basic Usage</h2>
 <h3 id="signature-provider">Signature Provider</h3>
 <p>The Signature Provider holds private keys and is responsible for signing transactions.</p>
 <p><strong><em>Using the JsSignatureProvider in the browser is not secure and should only be used for development purposes. Use a secure vault outside of the context of the webpage to ensure security when signing transactions in production</em></strong></p>
-<pre><code class="lang-js"><span class="hljs-keyword">const</span> defaultPrivateKey = <span class="hljs-string">&quot;5JtUScZK2XEp3g9gh7F8bwtPTRAkASmNrrftmx4AxDKD5K4zDnr&quot;</span>; <span class="hljs-comment">// useraaaaaaaa</span>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> defaultPrivateKey = <span class="hljs-string">&quot;5JtUScZK2XEp3g9gh7F8bwtPTRAkASmNrrftmx4AxDKD5K4zDnr&quot;</span>; <span class="hljs-comment">// bob</span>
 <span class="hljs-keyword">const</span> signatureProvider = <span class="hljs-keyword">new</span> JsSignatureProvider([defaultPrivateKey]);
 </code></pre>
 <h3 id="json-rpc">JSON-RPC</h3>
@@ -851,7 +859,7 @@
 <pre><code class="lang-js"><span class="hljs-keyword">const</span> rpc = <span class="hljs-keyword">new</span> JsonRpc(<span class="hljs-string">&apos;http://127.0.0.1:8888&apos;</span>, { fetch });
 </code></pre>
 <h3 id="api">API</h3>
-<p>Include textDecoder and textEncoder when using in browser.</p>
+<p>Include textDecoder and textEncoder when using in Node, React Native, IE11 or Edge Browsers.</p>
 <pre><code class="lang-js"><span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> Api({ rpc, signatureProvider, textDecoder: <span class="hljs-keyword">new</span> TextDecoder(), textEncoder: <span class="hljs-keyword">new</span> TextEncoder() });
 </code></pre>
 <h3 id="sending-a-transaction">Sending a transaction</h3>
@@ -892,11 +900,13 @@ try {
 }
 ...
 </code></pre>
-<h2 id="running-tests">Running Tests</h2>
-<h3 id="automated-unit-test-suite">Automated Unit Test Suite</h3>
-<p><code>npm run test</code> or <code>yarn test</code></p>
-<h3 id="web-integration-test-suite">Web Integration Test Suite</h3>
-<p>Run <code>npm run build-web</code> to build the browser distrubution then open <code>src/tests/web.html</code> in the browser of your choice. The file should run through 6 tests, relaying the results onto the webpage with a 2 second delay after each test. The final 2 tests should relay the exceptions being thrown onto the webpage for an invalid transaction and invalid rpc call.</p>
+<h2 id="contributing">Contributing</h2>
+<p><a href="CONTRIBUTING.md">Contributing Guide</a></p>
+<p><a href="CONTRIBUTING.md#conduct">Code of Conduct</a></p>
+<h2 id="license">License</h2>
+<p><a href="LICENSE">MIT</a></p>
+<h2 id="important">Important</h2>
+<p>See LICENSE for copyright and license terms. Block.one makes its contribution on a voluntary basis as a member of the EOSIO community and is not responsible for ensuring the overall performance of the software or any related applications. We make no representation, warranty, guarantee or undertaking in respect of the software or any related documentation, whether expressed or implied, including but not limited to the warranties or merchantability, fitness for a particular purpose and noninfringement. In no event shall we be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or documentation or the use or other dealings in the software or documentation. Any test results or performance figures are indicative and will not reflect performance under all conditions. Any reference to any third party or third-party product, service or other resource is not an endorsement or recommendation by Block.one. We are not responsible, and disclaim any and all responsibility and liability, for your use of or reliance on any of these resources. Third-party resources may be updated, changed or terminated at any time, so the information here may be out of date or inaccurate.</p>
 
                                 
                                 </section>
@@ -925,7 +935,7 @@ try {
             
                 
                 
-                <a href="guides/" class="navigation navigation-next navigation-unique" aria-label="Next page: guides">
+                <a href="Guides/" class="navigation navigation-next navigation-unique" aria-label="Next page: Guides">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -936,7 +946,7 @@ try {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"guides","level":"1.2","depth":1,"path":"guides/index.md","ref":"guides/index.md","articles":[{"title":"1. Browsers","level":"1.2.1","depth":2,"path":"guides/1.-Browsers.md","ref":"guides/1.-Browsers.md","articles":[]},{"title":"2. Transaction Examples","level":"1.2.2","depth":2,"path":"guides/2.-Transaction-Examples.md","ref":"guides/2.-Transaction-Examples.md","articles":[]},{"title":"3. Reading blockchain Examples","level":"1.2.3","depth":2,"path":"guides/3.-Reading blockchain-Examples.md","ref":"guides/3.-Reading blockchain-Examples.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["page-toc","custom-header-next@git+https://github.com/dskvr/gitbook-plugin-custom-header-next.git","favicon","livereload"],"pluginsConfig":{"livereload":{},"search":{},"page-toc":{"position":"before-first","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","showByDefault":true},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"images/favicon.ico","bookmark":"images/favicon.ico"},"custom-header-next":{"logo":"/eosjs/images/logo.png","logo_alt":"EOSIO","base_path":"/eosjs","text":"eosjs","navigations":[]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2018-12-18T19:37:02.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-18T19:37:35.881Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"Guides","level":"1.2","depth":1,"path":"Guides/index.md","ref":"Guides/index.md","articles":[{"title":"1. Browsers","level":"1.2.1","depth":2,"path":"Guides/1.-Browsers.md","ref":"Guides/1.-Browsers.md","articles":[]},{"title":"2. Transaction Examples","level":"1.2.2","depth":2,"path":"Guides/2.-Transaction-Examples.md","ref":"Guides/2.-Transaction-Examples.md","articles":[]},{"title":"3. Reading blockchain Examples","level":"1.2.3","depth":2,"path":"Guides/3.-Reading blockchain-Examples.md","ref":"Guides/3.-Reading blockchain-Examples.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["page-toc","custom-header-next@git+https://github.com/dskvr/gitbook-plugin-custom-header-next.git","favicon","toggle-chapters","nocache","livereload"],"pluginsConfig":{"nocache":{},"livereload":{},"search":{},"page-toc":{"position":"before-first","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","showByDefault":true},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"images/favicon.ico","bookmark":"images/favicon.ico"},"custom-header-next":{"logo":"/eosjs/images/logo.png","logo_alt":"EOSIO","base_path":"/eosjs","text":"EOSJS","navigations":[]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2019-04-01T19:59:48.679Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-01T20:00:00.355Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -959,6 +969,14 @@ try {
     
         
         <script src="gitbook/gitbook-plugin-custom-header-next/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-nocache/nocache.js"></script>
         
     
         
