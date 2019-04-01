@@ -3,7 +3,7 @@
  */
 // copyright defined in eosjs/LICENSE.txt
 
-import { Abi, PushTransactionArgs } from "./eosjs-rpc-interfaces";
+import { Abi, PushTransactionArgs } from './eosjs-rpc-interfaces';
 
 /** Arguments to `getRequiredKeys` */
 export interface AuthorityProviderArgs {
@@ -28,7 +28,6 @@ export interface AbiProvider {
 
 /** Structure for the raw form of ABIs */
 export interface BinaryAbi {
-
     /** account which has deployed the ABI */
     accountName: string;
 
