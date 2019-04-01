@@ -1,0 +1,1054 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>3. Reading blockchain Examples · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-custom-header-next/swiper-3.4.2.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-custom-header-next/header.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../reference/" />
+    
+    
+    <link rel="prev" href="2.-Transaction-Examples.html" />
+    
+
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    guides
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="1.-Browsers.html">
+            
+                <a href="1.-Browsers.html">
+            
+                    
+                    1. Browsers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="2.-Transaction-Examples.html">
+            
+                <a href="2.-Transaction-Examples.html">
+            
+                    
+                    2. Transaction Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.3" data-path="3.-Reading blockchain-Examples.html">
+            
+                <a href="3.-Reading blockchain-Examples.html">
+            
+                    
+                    3. Reading blockchain Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../reference/">
+            
+                <a href="../reference/">
+            
+                    
+                    Reference
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../reference/modules/api.html">
+            
+                <a href="../reference/modules/api.html">
+            
+                    
+                    API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../reference/classes/api.api-1.html">
+            
+                <a href="../reference/classes/api.api-1.html">
+            
+                    
+                    Api
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../reference/modules/api_interfaces.html">
+            
+                <a href="../reference/modules/api_interfaces.html">
+            
+                    
+                    API-Interfaces
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../reference/interfaces/api_interfaces.abiprovider.html">
+            
+                <a href="../reference/interfaces/api_interfaces.abiprovider.html">
+            
+                    
+                    AbiProvider
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../reference/interfaces/api_interfaces.authorityprovider.html">
+            
+                <a href="../reference/interfaces/api_interfaces.authorityprovider.html">
+            
+                    
+                    AuthorityProvider
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../reference/interfaces/api_interfaces.authorityproviderargs.html">
+            
+                <a href="../reference/interfaces/api_interfaces.authorityproviderargs.html">
+            
+                    
+                    AuthorityProviderArgs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../reference/interfaces/api_interfaces.binaryabi.html">
+            
+                <a href="../reference/interfaces/api_interfaces.binaryabi.html">
+            
+                    
+                    BinaryAbi
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.5" data-path="../reference/interfaces/api_interfaces.cachedabi.html">
+            
+                <a href="../reference/interfaces/api_interfaces.cachedabi.html">
+            
+                    
+                    CachedAbi
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.6" data-path="../reference/interfaces/api_interfaces.signatureprovider.html">
+            
+                <a href="../reference/interfaces/api_interfaces.signatureprovider.html">
+            
+                    
+                    SignatureProvider
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.7" data-path="../reference/interfaces/api_interfaces.signatureproviderargs.html">
+            
+                <a href="../reference/interfaces/api_interfaces.signatureproviderargs.html">
+            
+                    
+                    SignatureProviderArgs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../reference/modules/js_sig.html">
+            
+                <a href="../reference/modules/js_sig.html">
+            
+                    
+                    JS-Sig
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../reference/classes/js_sig.jssignatureprovider.html">
+            
+                <a href="../reference/classes/js_sig.jssignatureprovider.html">
+            
+                    
+                    JsSignatureProvider
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../reference/modules/json_rpc.html">
+            
+                <a href="../reference/modules/json_rpc.html">
+            
+                    
+                    JSON-RPC
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="../reference/classes/json_rpc.jsonrpc.html">
+            
+                <a href="../reference/classes/json_rpc.jsonrpc.html">
+            
+                    
+                    JsonRpc
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../reference/modules/numeric.html">
+            
+                <a href="../reference/modules/numeric.html">
+            
+                    
+                    Numeric
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.1" data-path="../reference/enums/numeric.keytype.html">
+            
+                <a href="../reference/enums/numeric.keytype.html">
+            
+                    
+                    KeyType
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.2" data-path="../reference/interfaces/numeric.key.html">
+            
+                <a href="../reference/interfaces/numeric.key.html">
+            
+                    
+                    Key
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../reference/modules/rpc_error.html">
+            
+                <a href="../reference/modules/rpc_error.html">
+            
+                    
+                    RPC-Error
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.6.1" data-path="../reference/classes/rpc_error.rpcerror.html">
+            
+                <a href="../reference/classes/rpc_error.rpcerror.html">
+            
+                    
+                    RpcError
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../reference/modules/rpc_interfaces.html">
+            
+                <a href="../reference/modules/rpc_interfaces.html">
+            
+                    
+                    RPC-Interfaces
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.7.1" data-path="../reference/interfaces/rpc_interfaces.abi.html">
+            
+                <a href="../reference/interfaces/rpc_interfaces.abi.html">
+            
+                    
+                    Abi
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.2" data-path="../reference/interfaces/rpc_interfaces.blocktaposinfo.html">
+            
+                <a href="../reference/interfaces/rpc_interfaces.blocktaposinfo.html">
+            
+                    
+                    BlockTaposInfo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.3" data-path="../reference/interfaces/rpc_interfaces.getabiresult.html">
+            
+                <a href="../reference/interfaces/rpc_interfaces.getabiresult.html">
+            
+                    
+                    GetAbiResult
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.4" data-path="../reference/interfaces/rpc_interfaces.getblockresult.html">
+            
+                <a href="../reference/interfaces/rpc_interfaces.getblockresult.html">
+            
+                    
+                    GetBlockResult
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.5" data-path="../reference/interfaces/rpc_interfaces.getcoderesult.html">
+            
+                <a href="../reference/interfaces/rpc_interfaces.getcoderesult.html">
+            
+                    
+                    GetCodeResult
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.6" data-path="../reference/interfaces/rpc_interfaces.getinforesult.html">
+            
+                <a href="../reference/interfaces/rpc_interfaces.getinforesult.html">
+            
+                    
+                    GetInfoResult
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.7" data-path="../reference/interfaces/rpc_interfaces.getrawcodeandabiresult.html">
+            
+                <a href="../reference/interfaces/rpc_interfaces.getrawcodeandabiresult.html">
+            
+                    
+                    GetRawCodeAndAbiResult
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.8" data-path="../reference/interfaces/rpc_interfaces.pushtransactionargs.html">
+            
+                <a href="../reference/interfaces/rpc_interfaces.pushtransactionargs.html">
+            
+                    
+                    PushTransactionArgs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../reference/modules/serialize.html">
+            
+                <a href="../reference/modules/serialize.html">
+            
+                    
+                    Serialize
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.8.1" data-path="../reference/classes/serialize.serialbuffer.html">
+            
+                <a href="../reference/classes/serialize.serialbuffer.html">
+            
+                    
+                    SerialBuffer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8.2" data-path="../reference/classes/serialize.serializerstate.html">
+            
+                <a href="../reference/classes/serialize.serializerstate.html">
+            
+                    
+                    SerializerState
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8.3" data-path="../reference/interfaces/serialize.action.html">
+            
+                <a href="../reference/interfaces/serialize.action.html">
+            
+                    
+                    Action
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8.4" data-path="../reference/interfaces/serialize.authorization.html">
+            
+                <a href="../reference/interfaces/serialize.authorization.html">
+            
+                    
+                    Authorization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8.5" data-path="../reference/interfaces/serialize.contract.html">
+            
+                <a href="../reference/interfaces/serialize.contract.html">
+            
+                    
+                    Contract
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8.6" data-path="../reference/interfaces/serialize.createtypeargs.html">
+            
+                <a href="../reference/interfaces/serialize.createtypeargs.html">
+            
+                    
+                    CreateTypeArgs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8.7" data-path="../reference/interfaces/serialize.field.html">
+            
+                <a href="../reference/interfaces/serialize.field.html">
+            
+                    
+                    Field
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8.8" data-path="../reference/interfaces/serialize.serializedaction.html">
+            
+                <a href="../reference/interfaces/serialize.serializedaction.html">
+            
+                    
+                    SerializedAction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8.9" data-path="../reference/interfaces/serialize.serializeroptions.html">
+            
+                <a href="../reference/interfaces/serialize.serializeroptions.html">
+            
+                    
+                    SerializerOptions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8.10" data-path="../reference/interfaces/serialize.symbol.html">
+            
+                <a href="../reference/interfaces/serialize.symbol.html">
+            
+                    
+                    Symbol
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8.11" data-path="../reference/interfaces/serialize.type.html">
+            
+                <a href="../reference/interfaces/serialize.type.html">
+            
+                    
+                    Type
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >3. Reading blockchain Examples</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="reading-blockchain">Reading blockchain</h1>
+<p>Reading blockchain state only requires an instance of <code>JsonRpc</code> connected to a node.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> { JsonRpc } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;eosjs&apos;</span>);
+<span class="hljs-keyword">const</span> fetch = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;node-fetch&apos;</span>);           <span class="hljs-comment">// node only; not needed in browsers</span>
+<span class="hljs-keyword">const</span> rpc = <span class="hljs-keyword">new</span> JsonRpc(<span class="hljs-string">&apos;http://localhost:8888&apos;</span>, { fetch });
+</code></pre>
+<h2 id="examples">Examples</h2>
+<h3 id="get-table-rows">Get table rows</h3>
+<p>Get the first 10 token balances of account <em>testacc</em>.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> resp = <span class="hljs-keyword">await</span> rpc.get_table_rows({
+    json: <span class="hljs-literal">true</span>,              <span class="hljs-comment">// Get the response as json</span>
+    code: <span class="hljs-string">&apos;eosio.token&apos;</span>,     <span class="hljs-comment">// Contract that we target</span>
+    scope: <span class="hljs-string">&apos;testacc&apos;</span>         <span class="hljs-comment">// Account that owns the data</span>
+    table: <span class="hljs-string">&apos;accounts&apos;</span>        <span class="hljs-comment">// Table name</span>
+    limit: <span class="hljs-number">10</span>,               <span class="hljs-comment">// Maximum number of rows that we want to get</span>
+    reverse = <span class="hljs-literal">false</span>,         <span class="hljs-comment">// Optional: Get reversed data</span>
+    show_payer = <span class="hljs-literal">false</span>,      <span class="hljs-comment">// Optional: Show ram payer</span>
+});
+
+<span class="hljs-built_in">console</span>.log(resp.rows);
+</code></pre>
+<p>Output:</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;rows&quot;</span>: [{
+      <span class="hljs-string">&quot;balance&quot;</span>: <span class="hljs-string">&quot;100.0000 HAK&quot;</span>
+    }
+  ],
+  <span class="hljs-string">&quot;more&quot;</span>: <span class="hljs-literal">false</span>
+}
+</code></pre>
+<h3 id="get-one-row-by-index">Get one row by index</h3>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> resp = <span class="hljs-keyword">await</span> rpc.get_table_rows({
+    json: <span class="hljs-literal">true</span>,                 <span class="hljs-comment">// Get the response as json</span>
+    code: <span class="hljs-string">&apos;contract&apos;</span>,           <span class="hljs-comment">// Contract that we target</span>
+    scope: <span class="hljs-string">&apos;contract&apos;</span>           <span class="hljs-comment">// Account that owns the data</span>
+    table: <span class="hljs-string">&apos;profiles&apos;</span>           <span class="hljs-comment">// Table name</span>
+    lower_bound: <span class="hljs-string">&apos;testacc&apos;</span>      <span class="hljs-comment">// Table primary key value</span>
+    limit: <span class="hljs-number">1</span>,                   <span class="hljs-comment">// Here we limit to 1 to get only the</span>
+    reverse = <span class="hljs-literal">false</span>,            <span class="hljs-comment">// Optional: Get reversed data</span>
+    show_payer = <span class="hljs-literal">false</span>,         <span class="hljs-comment">// Optional: Show ram payer</span>
+});
+<span class="hljs-built_in">console</span>.log(resp.rows);
+</code></pre>
+<p>Output:</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;rows&quot;</span>: [{
+      <span class="hljs-string">&quot;user&quot;</span>: <span class="hljs-string">&quot;testacc&quot;</span>,
+      <span class="hljs-string">&quot;age&quot;</span>: <span class="hljs-number">21</span>,
+      <span class="hljs-string">&quot;surname&quot;</span>: <span class="hljs-string">&quot;Martin&quot;</span>
+    }
+  ],
+  <span class="hljs-string">&quot;more&quot;</span>: <span class="hljs-literal">false</span>
+}
+</code></pre>
+<h3 id="get-one-row-by-secondary-index">Get one row by secondary index</h3>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> resp = <span class="hljs-keyword">await</span> rpc.get_table_rows({
+    json: <span class="hljs-literal">true</span>,                 <span class="hljs-comment">// Get the response as json</span>
+    code: <span class="hljs-string">&apos;contract&apos;</span>,           <span class="hljs-comment">// Contract that we target</span>
+    scope: <span class="hljs-string">&apos;contract&apos;</span>           <span class="hljs-comment">// Account that owns the data</span>
+    table: <span class="hljs-string">&apos;profiles&apos;</span>           <span class="hljs-comment">// Table name</span>
+    table_key: <span class="hljs-string">&apos;age&apos;</span>            <span class="hljs-comment">// Table secondaray key name</span>
+    lower_bound: <span class="hljs-number">21</span>             <span class="hljs-comment">// Table secondary key value</span>
+    limit: <span class="hljs-number">1</span>,                   <span class="hljs-comment">// Here we limit to 1 to get only row</span>
+    reverse = <span class="hljs-literal">false</span>,            <span class="hljs-comment">// Optional: Get reversed data</span>
+    show_payer = <span class="hljs-literal">false</span>,         <span class="hljs-comment">// Optional: Show ram payer</span>
+});
+<span class="hljs-built_in">console</span>.log(resp.rows);
+</code></pre>
+<p>Output:</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;rows&quot;</span>: [{
+      <span class="hljs-string">&quot;user&quot;</span>: <span class="hljs-string">&quot;testacc&quot;</span>,
+      <span class="hljs-string">&quot;age&quot;</span>: <span class="hljs-number">21</span>,
+      <span class="hljs-string">&quot;surname&quot;</span>: <span class="hljs-string">&quot;Martin&quot;</span>
+    }
+  ],
+  <span class="hljs-string">&quot;more&quot;</span>: <span class="hljs-literal">false</span>
+}
+</code></pre>
+<h3 id="get-currency-balance">Get currency balance</h3>
+<pre><code class="lang-javascript"><span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">await</span> rpc.get_currency_balance(<span class="hljs-string">&apos;eosio.token&apos;</span>, <span class="hljs-string">&apos;testacc&apos;</span>, <span class="hljs-string">&apos;HAK&apos;</span>));
+</code></pre>
+<p>Output:</p>
+<pre><code class="lang-json">[ <span class="hljs-string">&quot;1000000000.0000 HAK&quot;</span> ]
+</code></pre>
+<h3 id="get-account-info">Get account info</h3>
+<pre><code class="lang-javascript"><span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">await</span> rpc.get_account(<span class="hljs-string">&apos;testacc&apos;</span>));
+</code></pre>
+<p>Output:</p>
+<pre><code class="lang-json">{ <span class="hljs-string">&quot;account_name&quot;</span>: <span class="hljs-string">&quot;testacc&quot;</span>,
+  <span class="hljs-string">&quot;head_block_num&quot;</span>: <span class="hljs-number">1079</span>,
+  <span class="hljs-string">&quot;head_block_time&quot;</span>: <span class="hljs-string">&quot;2018-11-10T00:45:53.500&quot;</span>,
+  <span class="hljs-string">&quot;privileged&quot;</span>: <span class="hljs-literal">false</span>,
+  <span class="hljs-string">&quot;last_code_update&quot;</span>: <span class="hljs-string">&quot;1970-01-01T00:00:00.000&quot;</span>,
+  <span class="hljs-string">&quot;created&quot;</span>: <span class="hljs-string">&quot;2018-11-10T00:37:05.000&quot;</span>,
+  <span class="hljs-string">&quot;ram_quota&quot;</span>: <span class="hljs-number">-1</span>,
+  <span class="hljs-string">&quot;net_weight&quot;</span>: <span class="hljs-number">-1</span>,
+  <span class="hljs-string">&quot;cpu_weight&quot;</span>: <span class="hljs-number">-1</span>,
+  <span class="hljs-string">&quot;net_limit&quot;</span>: { <span class="hljs-string">&quot;used&quot;</span>: <span class="hljs-number">-1</span>, <span class="hljs-string">&quot;available&quot;</span>: <span class="hljs-number">-1</span>, <span class="hljs-string">&quot;max&quot;</span>: <span class="hljs-number">-1</span> },
+  <span class="hljs-string">&quot;cpu_limit&quot;</span>: { <span class="hljs-string">&quot;used&quot;</span>: <span class="hljs-number">-1</span>, <span class="hljs-string">&quot;available&quot;</span>: <span class="hljs-number">-1</span>, <span class="hljs-string">&quot;max&quot;</span>: <span class="hljs-number">-1</span> },
+  <span class="hljs-string">&quot;ram_usage&quot;</span>: <span class="hljs-number">2724</span>,
+  <span class="hljs-string">&quot;permissions&quot;</span>:
+   [ { <span class="hljs-string">&quot;perm_name&quot;</span>: <span class="hljs-string">&quot;active&quot;</span>, <span class="hljs-string">&quot;parent&quot;</span>: <span class="hljs-string">&quot;owner&quot;</span>, <span class="hljs-string">&quot;required_auth&quot;</span>: [] },
+     { <span class="hljs-string">&quot;perm_name&quot;</span>: <span class="hljs-string">&quot;owner&quot;</span>, <span class="hljs-string">&quot;parent&quot;</span>: <span class="hljs-string">&quot;&quot;</span>, <span class="hljs-string">&quot;required_auth&quot;</span>: [] } ],
+  <span class="hljs-string">&quot;total_resources&quot;</span>: <span class="hljs-literal">null</span>,
+  <span class="hljs-string">&quot;self_delegated_bandwidth&quot;</span>: <span class="hljs-literal">null</span>,
+  <span class="hljs-string">&quot;refund_request&quot;</span>: <span class="hljs-literal">null</span>,
+  <span class="hljs-string">&quot;voter_info&quot;</span>: <span class="hljs-literal">null</span> }
+</code></pre>
+<h3 id="get-block">Get block</h3>
+<pre><code class="lang-javascript"><span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">await</span> rpc.get_block(<span class="hljs-number">1</span>));
+</code></pre>
+<p>Output:</p>
+<pre><code class="lang-json">{ <span class="hljs-string">&quot;timestamp&quot;</span>: <span class="hljs-string">&quot;2018-06-01T12:00:00.000&quot;</span>,
+  <span class="hljs-string">&quot;producer&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+  <span class="hljs-string">&quot;confirmed&quot;</span>: <span class="hljs-number">1</span>,
+  <span class="hljs-string">&quot;previous&quot;</span>: <span class="hljs-string">&quot;0000000000000000000000000000000000000000000000000000000000000000&quot;</span>,
+  <span class="hljs-string">&quot;transaction_mroot&quot;</span>: <span class="hljs-string">&quot;0000000000000000000000000000000000000000000000000000000000000000&quot;</span>,
+  <span class="hljs-string">&quot;action_mroot&quot;</span>: <span class="hljs-string">&quot;cf057bbfb72640471fd910bcb67639c22df9f92470936cddc1ade0e2f2e7dc4f&quot;</span>,
+  <span class="hljs-string">&quot;schedule_version&quot;</span>: <span class="hljs-number">0</span>,
+  <span class="hljs-string">&quot;new_producers&quot;</span>: <span class="hljs-literal">null</span>,
+  <span class="hljs-string">&quot;header_extensions&quot;</span>: [],
+  <span class="hljs-string">&quot;producer_signature&quot;</span>: <span class="hljs-string">&quot;SIG_K1_111111111111111111111111111111111111111111111111111111111111111116uk5ne&quot;</span>,
+  <span class="hljs-string">&quot;transactions&quot;</span>: [],
+  <span class="hljs-string">&quot;block_extensions&quot;</span>: [],
+  <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;00000001bcf2f448225d099685f14da76803028926af04d2607eafcf609c265c&quot;</span>,
+  <span class="hljs-string">&quot;block_num&quot;</span>: <span class="hljs-number">1</span>,
+  <span class="hljs-string">&quot;ref_block_prefix&quot;</span>: <span class="hljs-number">2517196066</span> }
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="2.-Transaction-Examples.html" class="navigation navigation-prev " aria-label="Previous page: 2. Transaction Examples">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../reference/" class="navigation navigation-next " aria-label="Next page: Reference">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"3. Reading blockchain Examples","level":"1.2.3","depth":2,"next":{"title":"Reference","level":"1.3","depth":1,"path":"reference/index.md","ref":"reference/index.md","articles":[{"title":"API","level":"1.3.1","depth":2,"path":"reference/modules/api.md","ref":"reference/modules/api.md","articles":[{"title":"Api","level":"1.3.1.1","depth":3,"path":"reference/classes/api.api-1.md","ref":"reference/classes/api.api-1.md","articles":[]}]},{"title":"API-Interfaces","level":"1.3.2","depth":2,"path":"reference/modules/api_interfaces.md","ref":"reference/modules/api_interfaces.md","articles":[{"title":"AbiProvider","level":"1.3.2.1","depth":3,"path":"reference/interfaces/api_interfaces.abiprovider.md","ref":"reference/interfaces/api_interfaces.abiprovider.md","articles":[]},{"title":"AuthorityProvider","level":"1.3.2.2","depth":3,"path":"reference/interfaces/api_interfaces.authorityprovider.md","ref":"reference/interfaces/api_interfaces.authorityprovider.md","articles":[]},{"title":"AuthorityProviderArgs","level":"1.3.2.3","depth":3,"path":"reference/interfaces/api_interfaces.authorityproviderargs.md","ref":"reference/interfaces/api_interfaces.authorityproviderargs.md","articles":[]},{"title":"BinaryAbi","level":"1.3.2.4","depth":3,"path":"reference/interfaces/api_interfaces.binaryabi.md","ref":"reference/interfaces/api_interfaces.binaryabi.md","articles":[]},{"title":"CachedAbi","level":"1.3.2.5","depth":3,"path":"reference/interfaces/api_interfaces.cachedabi.md","ref":"reference/interfaces/api_interfaces.cachedabi.md","articles":[]},{"title":"SignatureProvider","level":"1.3.2.6","depth":3,"path":"reference/interfaces/api_interfaces.signatureprovider.md","ref":"reference/interfaces/api_interfaces.signatureprovider.md","articles":[]},{"title":"SignatureProviderArgs","level":"1.3.2.7","depth":3,"path":"reference/interfaces/api_interfaces.signatureproviderargs.md","ref":"reference/interfaces/api_interfaces.signatureproviderargs.md","articles":[]}]},{"title":"JS-Sig","level":"1.3.3","depth":2,"path":"reference/modules/js_sig.md","ref":"reference/modules/js_sig.md","articles":[{"title":"JsSignatureProvider","level":"1.3.3.1","depth":3,"path":"reference/classes/js_sig.jssignatureprovider.md","ref":"reference/classes/js_sig.jssignatureprovider.md","articles":[]}]},{"title":"JSON-RPC","level":"1.3.4","depth":2,"path":"reference/modules/json_rpc.md","ref":"reference/modules/json_rpc.md","articles":[{"title":"JsonRpc","level":"1.3.4.1","depth":3,"path":"reference/classes/json_rpc.jsonrpc.md","ref":"reference/classes/json_rpc.jsonrpc.md","articles":[]}]},{"title":"Numeric","level":"1.3.5","depth":2,"path":"reference/modules/numeric.md","ref":"reference/modules/numeric.md","articles":[{"title":"KeyType","level":"1.3.5.1","depth":3,"path":"reference/enums/numeric.keytype.md","ref":"reference/enums/numeric.keytype.md","articles":[]},{"title":"Key","level":"1.3.5.2","depth":3,"path":"reference/interfaces/numeric.key.md","ref":"reference/interfaces/numeric.key.md","articles":[]}]},{"title":"RPC-Error","level":"1.3.6","depth":2,"path":"reference/modules/rpc_error.md","ref":"reference/modules/rpc_error.md","articles":[{"title":"RpcError","level":"1.3.6.1","depth":3,"path":"reference/classes/rpc_error.rpcerror.md","ref":"reference/classes/rpc_error.rpcerror.md","articles":[]}]},{"title":"RPC-Interfaces","level":"1.3.7","depth":2,"path":"reference/modules/rpc_interfaces.md","ref":"reference/modules/rpc_interfaces.md","articles":[{"title":"Abi","level":"1.3.7.1","depth":3,"path":"reference/interfaces/rpc_interfaces.abi.md","ref":"reference/interfaces/rpc_interfaces.abi.md","articles":[]},{"title":"BlockTaposInfo","level":"1.3.7.2","depth":3,"path":"reference/interfaces/rpc_interfaces.blocktaposinfo.md","ref":"reference/interfaces/rpc_interfaces.blocktaposinfo.md","articles":[]},{"title":"GetAbiResult","level":"1.3.7.3","depth":3,"path":"reference/interfaces/rpc_interfaces.getabiresult.md","ref":"reference/interfaces/rpc_interfaces.getabiresult.md","articles":[]},{"title":"GetBlockResult","level":"1.3.7.4","depth":3,"path":"reference/interfaces/rpc_interfaces.getblockresult.md","ref":"reference/interfaces/rpc_interfaces.getblockresult.md","articles":[]},{"title":"GetCodeResult","level":"1.3.7.5","depth":3,"path":"reference/interfaces/rpc_interfaces.getcoderesult.md","ref":"reference/interfaces/rpc_interfaces.getcoderesult.md","articles":[]},{"title":"GetInfoResult","level":"1.3.7.6","depth":3,"path":"reference/interfaces/rpc_interfaces.getinforesult.md","ref":"reference/interfaces/rpc_interfaces.getinforesult.md","articles":[]},{"title":"GetRawCodeAndAbiResult","level":"1.3.7.7","depth":3,"path":"reference/interfaces/rpc_interfaces.getrawcodeandabiresult.md","ref":"reference/interfaces/rpc_interfaces.getrawcodeandabiresult.md","articles":[]},{"title":"PushTransactionArgs","level":"1.3.7.8","depth":3,"path":"reference/interfaces/rpc_interfaces.pushtransactionargs.md","ref":"reference/interfaces/rpc_interfaces.pushtransactionargs.md","articles":[]}]},{"title":"Serialize","level":"1.3.8","depth":2,"path":"reference/modules/serialize.md","ref":"reference/modules/serialize.md","articles":[{"title":"SerialBuffer","level":"1.3.8.1","depth":3,"path":"reference/classes/serialize.serialbuffer.md","ref":"reference/classes/serialize.serialbuffer.md","articles":[]},{"title":"SerializerState","level":"1.3.8.2","depth":3,"path":"reference/classes/serialize.serializerstate.md","ref":"reference/classes/serialize.serializerstate.md","articles":[]},{"title":"Action","level":"1.3.8.3","depth":3,"path":"reference/interfaces/serialize.action.md","ref":"reference/interfaces/serialize.action.md","articles":[]},{"title":"Authorization","level":"1.3.8.4","depth":3,"path":"reference/interfaces/serialize.authorization.md","ref":"reference/interfaces/serialize.authorization.md","articles":[]},{"title":"Contract","level":"1.3.8.5","depth":3,"path":"reference/interfaces/serialize.contract.md","ref":"reference/interfaces/serialize.contract.md","articles":[]},{"title":"CreateTypeArgs","level":"1.3.8.6","depth":3,"path":"reference/interfaces/serialize.createtypeargs.md","ref":"reference/interfaces/serialize.createtypeargs.md","articles":[]},{"title":"Field","level":"1.3.8.7","depth":3,"path":"reference/interfaces/serialize.field.md","ref":"reference/interfaces/serialize.field.md","articles":[]},{"title":"SerializedAction","level":"1.3.8.8","depth":3,"path":"reference/interfaces/serialize.serializedaction.md","ref":"reference/interfaces/serialize.serializedaction.md","articles":[]},{"title":"SerializerOptions","level":"1.3.8.9","depth":3,"path":"reference/interfaces/serialize.serializeroptions.md","ref":"reference/interfaces/serialize.serializeroptions.md","articles":[]},{"title":"Symbol","level":"1.3.8.10","depth":3,"path":"reference/interfaces/serialize.symbol.md","ref":"reference/interfaces/serialize.symbol.md","articles":[]},{"title":"Type","level":"1.3.8.11","depth":3,"path":"reference/interfaces/serialize.type.md","ref":"reference/interfaces/serialize.type.md","articles":[]}]}]},"previous":{"title":"2. Transaction Examples","level":"1.2.2","depth":2,"path":"guides/2.-Transaction-Examples.md","ref":"guides/2.-Transaction-Examples.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["page-toc","custom-header-next@git+https://github.com/dskvr/gitbook-plugin-custom-header-next.git","toggle-chapters","nocache"],"pluginsConfig":{"nocache":{}:{},"search":{},"page-toc":{"position":"before-first","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","showByDefault":true},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"images/favicon.ico","bookmark":"images/favicon.ico"},"custom-header-next":{"logo":"/eosjs/images/logo.png","logo_alt":"EOSIO","base_path":"/eosjs","text":"EOSJS","navigations":[]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"guides/3.-Reading blockchain-Examples.md","mtime":"2019-04-01T19:47:41.049Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-01T20:46:15.780Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-custom-header-next/swiper-3.4.2.jquery.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-custom-header-next/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-nocache/nocache.js"></script>
+        
+    
+        
+        
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

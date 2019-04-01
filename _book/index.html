@@ -1,0 +1,301 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Introduction · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter active" data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Introduction</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="eosjs-">eosjs <img src="https://img.shields.io/npm/dw/eosjs.svg" alt="npm"></h1>
+<p>Javascript API for integration with EOSIO-based blockchains using <a href="https://developers.eos.io/eosio-nodeos/reference" target="_blank">EOSIO RPC API</a>.</p>
+<p>Documentation can be found <a href="https://eosio.github.io/eosjs" target="_blank">here</a></p>
+<h2 id="installation">Installation</h2>
+<h3 id="npm">NPM</h3>
+<p>The official distribution package can be found at <a href="https://www.npmjs.com/package/eosjs" target="_blank">npm</a>.</p>
+<h3 id="nodejs-dependency">NodeJS Dependency</h3>
+<p><code>yarn add eosjs</code></p>
+<h3 id="browser-distribution">Browser Distribution</h3>
+<p>Clone this repository locally then run <code>yarn build-web</code>.  The browser distribution will be located in <code>dist-web</code> and can be directly copied into your project repository. The <code>dist-web</code> folder contains minified bundles ready for production, along with source mapped versions of the library for debugging.  For full browser usage examples, <a href="https://eosio.github.io/eosjs/guides/1.-Browsers.html" target="_blank">see the documentation</a>.</p>
+<h2 id="import">Import</h2>
+<h3 id="es-modules">ES Modules</h3>
+<p>Importing using ES6 module syntax in the browser is supported if you have a transpiler, such as Babel.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { Api, JsonRpc, RpcError } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;eosjs&apos;</span>;
+<span class="hljs-keyword">import</span> { JsSignatureProvider } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;eosjs/dist/eosjs-jssig&apos;</span>;           <span class="hljs-comment">// development only</span>
+</code></pre>
+<h3 id="commonjs">CommonJS</h3>
+<p>Importing using commonJS syntax is supported by NodeJS out of the box.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> { Api, JsonRpc, RpcError } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;eosjs&apos;</span>);
+<span class="hljs-keyword">const</span> { JsSignatureProvider } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;eosjs/dist/eosjs-jssig&apos;</span>);      <span class="hljs-comment">// development only</span>
+<span class="hljs-keyword">const</span> fetch = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;node-fetch&apos;</span>);                                    <span class="hljs-comment">// node only; not needed in browsers</span>
+<span class="hljs-keyword">const</span> { TextEncoder, TextDecoder } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;util&apos;</span>);                   <span class="hljs-comment">// node only; native TextEncoder/Decoder</span>
+<span class="hljs-keyword">const</span> { TextEncoder, TextDecoder } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;text-encoding&apos;</span>);          <span class="hljs-comment">// React Native, IE11, and Edge Browsers only</span>
+</code></pre>
+<h2 id="basic-usage">Basic Usage</h2>
+<h3 id="signature-provider">Signature Provider</h3>
+<p>The Signature Provider holds private keys and is responsible for signing transactions.</p>
+<p><strong><em>Using the JsSignatureProvider in the browser is not secure and should only be used for development purposes. Use a secure vault outside of the context of the webpage to ensure security when signing transactions in production</em></strong></p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> defaultPrivateKey = <span class="hljs-string">&quot;5JtUScZK2XEp3g9gh7F8bwtPTRAkASmNrrftmx4AxDKD5K4zDnr&quot;</span>; <span class="hljs-comment">// bob</span>
+<span class="hljs-keyword">const</span> signatureProvider = <span class="hljs-keyword">new</span> JsSignatureProvider([defaultPrivateKey]);
+</code></pre>
+<h3 id="json-rpc">JSON-RPC</h3>
+<p>Open a connection to JSON-RPC, include <code>fetch</code> when on NodeJS.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> rpc = <span class="hljs-keyword">new</span> JsonRpc(<span class="hljs-string">&apos;http://127.0.0.1:8888&apos;</span>, { fetch });
+</code></pre>
+<h3 id="api">API</h3>
+<p>Include textDecoder and textEncoder when using in Node, React Native, IE11 or Edge Browsers.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> Api({ rpc, signatureProvider, textDecoder: <span class="hljs-keyword">new</span> TextDecoder(), textEncoder: <span class="hljs-keyword">new</span> TextEncoder() });
+</code></pre>
+<h3 id="sending-a-transaction">Sending a transaction</h3>
+<p><code>transact()</code> is used to sign and push transactions onto the blockchain with an optional configuration object parameter.  This parameter can override the default value of <code>broadcast: true</code>, and can be used to fill TAPOS fields given <code>blocksBehind</code> and <code>expireSeconds</code>.  Given no configuration options, transactions are expected to be unpacked with TAPOS fields (<code>expiration</code>, <code>ref_block_num</code>, <code>ref_block_prefix</code>) and will automatically be broadcast onto the chain.</p>
+<pre><code class="lang-js">(<span class="hljs-keyword">async</span> () =&gt; {
+  <span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> api.transact({
+    actions: [{
+      account: <span class="hljs-string">&apos;eosio.token&apos;</span>,
+      name: <span class="hljs-string">&apos;transfer&apos;</span>,
+      authorization: [{
+        actor: <span class="hljs-string">&apos;useraaaaaaaa&apos;</span>,
+        permission: <span class="hljs-string">&apos;active&apos;</span>,
+      }],
+      data: {
+        <span class="hljs-keyword">from</span>: <span class="hljs-string">&apos;useraaaaaaaa&apos;</span>,
+        to: <span class="hljs-string">&apos;useraaaaaaab&apos;</span>,
+        quantity: <span class="hljs-string">&apos;0.0001 SYS&apos;</span>,
+        memo: <span class="hljs-string">&apos;&apos;</span>,
+      },
+    }]
+  }, {
+    blocksBehind: <span class="hljs-number">3</span>,
+    expireSeconds: <span class="hljs-number">30</span>,
+  });
+  <span class="hljs-built_in">console</span>.dir(result);
+})();
+</code></pre>
+<h3 id="error-handling">Error handling</h3>
+<p>use <code>RpcError</code> for handling RPC Errors</p>
+<pre><code class="lang-js">...
+try {
+  <span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> api.transact({
+  ...
+} <span class="hljs-keyword">catch</span> (e) {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;\nCaught exception: &apos;</span> + e);
+  <span class="hljs-keyword">if</span> (e <span class="hljs-keyword">instanceof</span> RpcError)
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify(e.json, <span class="hljs-literal">null</span>, <span class="hljs-number">2</span>));
+}
+...
+</code></pre>
+<h2 id="contributing">Contributing</h2>
+<p><a href="CONTRIBUTING.md">Contributing Guide</a></p>
+<p><a href="CONTRIBUTING.md#conduct">Code of Conduct</a></p>
+<h2 id="license">License</h2>
+<p><a href="LICENSE">MIT</a></p>
+<h2 id="important">Important</h2>
+<p>See LICENSE for copyright and license terms.  Block.one makes its contribution on a voluntary basis as a member of the EOSIO community and is not responsible for ensuring the overall performance of the software or any related applications.  We make no representation, warranty, guarantee or undertaking in respect of the software or any related documentation, whether expressed or implied, including but not limited to the warranties or merchantability, fitness for a particular purpose and noninfringement. In no event shall we be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or documentation or the use or other dealings in the software or documentation.  Any test results or performance figures are indicative and will not reflect performance under all conditions.  Any reference to any third party or third-party product, service or other resource is not an endorsement or recommendation by Block.one.  We are not responsible, and disclaim any and all responsibility and liability, for your use of or reliance on any of these resources. Third-party resources may be updated, changed or terminated at any time, so the information here may be out of date or inaccurate.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2019-04-01T19:47:41.002Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-01T20:54:45.138Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
