@@ -79,8 +79,8 @@ function encodeName(name, littleEndian = true) {
   if(typeof name !== 'string')
     throw new TypeError('name parameter is a required string')
 
-  if(name.length > 12)
-    throw new TypeError('A name can be up to 12 characters long')
+  if(name.length > 13)
+    throw new TypeError('A name can be up to 13 characters long')
 
   let bitstr = ''
   for(let i = 0; i <= 12; i++) { // process all 64 bits (even if name is short)
